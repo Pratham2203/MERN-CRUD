@@ -9,7 +9,7 @@ function Update() {
     const {id}=useParams();
     const navigate=useNavigate();
     async function getSingleUser(){
-        const response=await fetch(`http://localhost:5000/${id}`);
+        const response=await fetch(`https://mern-crud-omega.vercel.app/${id}`);
         const result=await response.json();
         if(!response.ok){
             console.log(result.error);
@@ -27,7 +27,7 @@ function Update() {
         e.preventDefault();
         const updatedUser = { name, email, age };
         console.log(updatedUser);
-        const response = await fetch(`http://localhost:5000/edit/${id}`, {
+        const response = await fetch(`https://mern-crud-omega.vercel.app/edit/${id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
