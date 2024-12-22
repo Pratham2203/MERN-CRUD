@@ -11,7 +11,7 @@ const DB_NAME = "merndb";
 
 app.use(express.json());
 app.use(cors({
-    origin: 'https://mern-crud-omega.vercel.app'|| '*', // Replace with your frontend's URL
+    origin: 'https://mern-crud-frontend-tau.vercel.app'|| '*', // Replace with your frontend's URL
     credentials: true,
 }));
 
